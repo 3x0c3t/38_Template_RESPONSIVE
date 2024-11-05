@@ -1,0 +1,156 @@
+/* === TEMPLATE - RESPONSIVE === */
+/* style.css */
+/* defaut - ?? */
+/* 20241105 - 08:04:00 */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(0,63,77,1) 0%, rgba(34,34,34,1) 100%);
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Styles Mobile ===== */
+.header {
+    position: relative; /* For positioning burger menu */
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(0,63,77,1) 100%);
+    color: #fff;
+}
+
+.header1 {
+    display: flex; /* Utilisation du flex pour aligner les éléments */
+    justify-content: space-between; /* Espace entre le logo et le titre */
+    align-items: center; /* Centrer verticalement les éléments */
+    width: 100%;
+}
+
+.header1-1 {
+    display: flex; /* Permet d'aligner le logo avec d'autres éléments si nécessaire */
+}
+
+.logo {
+    height: 40px; /* Ajustez la hauteur du logo selon vos besoins */
+    margin-right: 10px; /* Espacement entre le logo et le titre */
+    border-radius: 8px; /* Ajoute un arrondi aux coins du logo */
+    overflow: hidden; /* Assure que l'image ne déborde pas */
+    border:1px solid #000000;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7) /* Halo lumineux */
+}
+
+.header1-2 {
+    flex-grow: 1; /* Permet d'occuper l'espace restant pour le titre */
+    text-align: left; /* Aligner le texte à droite si souhaité */
+    font-size: 0.5em;
+}
+
+.burger-menu {
+    position: absolute;
+    display: block; /* Show burger menu in mobile */
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header2 {
+    display: none; /* Hide navigation links by default in mobile */
+    width: 100%;
+    flex-direction: row; /* Elements are in a row */
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 10px;
+    background: radial-gradient(circle, rgba(196,196,196,1) 0%, rgba(0,63,77,1) 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.header2-1,
+.header2-2,
+.header2-3 {
+    margin: 5px;
+    padding: 5px;
+}
+
+.header2 a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    max-width: 96%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(0,63,77,1) 100%);
+    color: #fff;
+}
+
+/* ===== Styles Desktop ===== */
+@media (min-width: 600px) {
+    .header2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .burger-menu {
+        display: none; /* Hide burger menu in desktop */
+    }
+
+    .header2-1,
+    .header2-2,
+    .header2-3 {
+        margin: 0;
+    }
+
+    .content {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 900px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .header1 h1 {
+        font-size: 2em;
+    }
+
+    .header2 a {
+        font-size: 1.1em;
+    }
+
+    .content {
+        padding: 30px;
+    }
+}
